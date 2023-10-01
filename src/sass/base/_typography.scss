@@ -1,0 +1,18 @@
+body {
+  font-family: var(--ff-body);
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-bold);
+}
+
+strong,
+b {
+  font-weight: var(--fw-bold);
+}

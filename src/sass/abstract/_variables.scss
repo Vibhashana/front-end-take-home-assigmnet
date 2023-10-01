@@ -1,0 +1,50 @@
+$colors: (
+  "primary": (
+    500: hsl(229, 72%, 30%),
+    400: hwb(227 18% 18%),
+    200: hsl(229, 67%, 68%),
+  ),
+
+  "secondary": (
+    900: hsl(0, 50%, 32%),
+    400: hsl(0, 94%, 66%),
+  ),
+
+  "neutral": (
+    900: hsl(0, 0%, 0%),
+    400: hsl(0, 0%, 17%),
+    300: hsl(0, 0%, 25%),
+    200: hsl(0, 0%, 59%),
+    150: hsl(0, 0%, 85%),
+    100: hsl(0, 0%, 100%),
+  ),
+
+  "dark": (
+    400: hsl(227, 14.3%, 8.8%),
+    300: hsl(227, 14.3%, 17.5%),
+    200: hsl(227, 14.3%, 17.5%),
+    100: hsl(227, 14.3%, 35%),
+  ),
+);
+
+:root {
+  // Font face
+  --ff-primary: "Poppins", sans-serif;
+  --ff-body: var(--ff-primary);
+
+  // Font weight
+  --fw-regular: 400;
+  --fw-bold: 600;
+
+  //Screen sizes
+  --sz-mobile: 40em;
+  --sz-tablet: 48em;
+  --sz-desktop: 1440px;
+
+  // Colors
+  @each $type, $variants in $colors {
+    @each $variant, $color in $variants {
+      --clr-#{$type}-#{$variant}: #{$color};
+    }
+  }
+}

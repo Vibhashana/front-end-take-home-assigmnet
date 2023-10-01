@@ -1,0 +1,9 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-neutral-400: var(--clr-dark-400);
+    --clr-neutral-300: var(--clr-dark-300);
+    --clr-neutral-200: var(--clr-dark-200);
+    --clr-neutral-150: var(--clr-dark-150);
+    --clr-neutral-100: var(--clr-dark-100);
+  }
+}

@@ -1,0 +1,74 @@
+/* makes sizing simpler */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+  // color-scheme: dark light;
+}
+
+/* min body height */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizedSpeed;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  background-color: var(--clr-neutral-150);
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+*:focus-visible {
+  outline: 2px dashed currentColor;
+  outline-offset: 0.25em;
+}
